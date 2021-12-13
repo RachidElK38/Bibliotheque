@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+ 
+    <script src="ss.js" defer></script>
+    <title>CRUD</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Gestion de bibliotheque</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Ajouter livre</button>
+        <table id="table" class="records">
+            
+                <tr>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Prix</th>
+                    <th>Date Pub</th>
+                    <th>Langue</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+                <tbody>
+
+                </tbody>
+         </table>
+        <div  class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    
+                    <i class="modal-close" id="modalClose">&#10006;</i>
+                </header>
+                <form id="form" class="modal-form" >
+
+                 <div class="container">
+                     <div class="fields">
+                    <input type="text" id="titre" data-index="new" class="modal-field" placeholder="Titre">
+                    <span></span>
+                </div>
+                <div  class="fields">
+                    <input type="text" id="auteur" class="modal-field" placeholder="Auteur" >
+                    <span></span>
+                </div>
+                <div  class="fields">
+                    <input type="text" id="prix" class="modal-field" placeholder="Prix" >
+                    <span></span>
+                </div>
+                <div  class="fields">
+                    <input type="date" id="date" class="modal-field" placeholder="Date Pub">
+                    <span></span>
+                </div>
+                <div  class="fields">
+                    <select id="identifiantDeMonSelect" class="modal-field">
+                        <option value="Arabe">Arabe</option>
+                        <option value="Anglais">Anglais</option>
+                        <option value="Français">Français</option>
+                    </select>
+                </div>
+
+                    <div>
+                    <input type="radio" name="choice" value="Roman" id="r"> 
+                    <label for="r">Roman</label>
+                    <input type="radio" name="choice" value="Essaie" id="r1">
+                    <label for="r1">Essaie</label>
+                    <input type="radio" name="choice" value="Bande-Dessinée" id="r2">
+                    <label for="r2">Bande-Dessinée</label>
+                </div>
+                </div>
+                </form>
+                <footer class="modal-footer">
+                    <button id="sauvegarder" onclick="onFormSubmit();" class="button green">Sauvegarder</button>
+                    <button id="annuler" class="button blue">Annuler</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; REK
+    </footer>
+</body>
+
+</html>
